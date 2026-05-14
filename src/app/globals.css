@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: 'Inter', 'Space Grotesk', 'Geist', 'Satoshi', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: #020617;
+  color: #f8fafc;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: radial-gradient(circle at 10% 10%, rgba(56, 189, 248, 0.14), transparent 18%), radial-gradient(circle at 85% 12%, rgba(168, 85, 247, 0.12), transparent 20%), linear-gradient(180deg, #020617 0%, #090d1a 100%);
+  color: #e2e8f0;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(0, 191, 255, 0.24);
+  color: white;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+}
+
+::placeholder {
+  color: #94a3b8;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle at 20% 18%, rgba(56, 189, 248, 0.14), transparent 15%), radial-gradient(circle at 70% 10%, rgba(168, 85, 247, 0.12), transparent 14%), radial-gradient(circle at 50% 90%, rgba(34, 211, 238, 0.10), transparent 16%);
+  pointer-events: none;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+@layer utilities {
+  .glass-card {
+    @apply rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-3xl shadow-panel;
+  }
+
+  .glass-border {
+    border-image: linear-gradient(135deg, rgba(56,189,248,0.55), rgba(168,85,247,0.45)) 1;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(0, 191, 255, 0.18);
+  }
+
+  .soft-ring {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04), 0 18px 90px rgba(0, 0, 0, 0.28);
+  }
+}
+
+#nprogress {
+  pointer-events: none;
+}
