@@ -35,10 +35,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        <div className="min-h-screen overflow-hidden text-white">
-          <div className="pointer-events-none fixed inset-x-0 top-0 h-72 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.18),_transparent_20%)] opacity-80" />
-          <div className="pointer-events-none fixed inset-x-0 bottom-0 h-72 bg-[radial-gradient(circle_at_bottom_right,_rgba(168,85,247,0.16),_transparent_25%)] opacity-80" />
+      <body className="bg-[#05050d] text-white">
+        <div className="min-h-screen overflow-hidden bg-[#05050d] text-white">
+          <div className="pointer-events-none fixed inset-x-0 top-0 h-72 bg-[radial-gradient(circle_at_top,_rgba(136,85,255,0.24),_transparent_20%)] opacity-80" />
+          <div className="pointer-events-none fixed inset-x-0 bottom-0 h-72 bg-[radial-gradient(circle_at_bottom_right,_rgba(96,165,250,0.18),_transparent_25%)] opacity-70" />
           <Navbar />
           <main>{children}</main>
           <Footer />

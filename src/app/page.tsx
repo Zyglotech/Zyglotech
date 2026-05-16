@@ -1,15 +1,16 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight, Bolt, Cloud, Cpu, GraduationCap, Sparkles, TrendingUp, Globe, ShieldCheck, Users } from 'lucide-react';
 import { ServiceCard } from '@/components/ServiceCard';
 import { TestimonialCarousel } from '@/components/TestimonialCarousel';
 
 const trustBadges = [
-  'AI Powered',
-  '99.9% Uptime',
+  'Enterprise-ready',
+  'AI-first architecture',
   'Chennai HQ',
-  'WhatsApp Integration',
+  'Rapid go-live',
 ];
 
 const featureCards = [
@@ -35,30 +36,39 @@ const faqItems = [
 export default function HomePage() {
   return (
     <div className="relative overflow-hidden">
-      <section className="relative pt-8 pb-24 sm:pt-10">
-        <div className="absolute inset-x-0 top-0 h-72 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.16),_transparent_34%)] opacity-80" />
-        <div className="absolute inset-x-0 bottom-0 h-72 bg-[radial-gradient(circle_at_bottom_right,_rgba(168,85,247,0.16),_transparent_30%)] opacity-70" />
+      <section className="relative pt-12 pb-28 sm:pt-16">
+        <div className="absolute inset-x-0 top-0 h-[380px] bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.16),_transparent_28%)] opacity-80" />
+        <div className="absolute inset-x-0 bottom-0 h-[340px] bg-[radial-gradient(circle_at_bottom_right,_rgba(168,85,247,0.16),_transparent_28%)] opacity-70" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-16 lg:grid-cols-[0.95fr_1.05fr] xl:items-center">
             <div className="space-y-8">
-              <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm uppercase tracking-[0.3em] text-cyan-200 backdrop-blur-lg">
+              <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-slate-950/70 px-4 py-2 text-xs uppercase tracking-[0.35em] text-cyan-300 backdrop-blur-xl">
                 <Sparkles className="h-4 w-4 text-cyan-300" />
-                World-class AI software for modern enterprises
+                Enterprise AI Platforms with measurable ROI
+              </div>
+              <div className="flex items-center gap-4 rounded-[2rem] border border-white/10 bg-slate-950/90 px-4 py-3 shadow-soft">
+                <div className="relative h-12 w-12 overflow-hidden rounded-3xl bg-slate-900/80 ring-1 ring-white/10">
+                  <Image src="/zyglo-logo.svg" alt="Zyglo logo" fill className="object-contain" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-white">Zyglo Tech Enterprise</p>
+                  <p className="text-sm text-slate-400">Brand identity aligned with your world-class product</p>
+                </div>
               </div>
               <div className="space-y-6">
                 <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
-                  Build AI systems that scale your business.
+                  Premium AI, ERP, automation and academy systems for world-class businesses.
                 </h1>
                 <p className="max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
-                  Zyglo Tech Enterprise crafts premium AI chatbots, ERP platforms, automation systems, and academy experiences for growth-focused companies in Chennai and beyond.
+                  Zyglo Tech designs high-performance digital products that unify customer journeys, operations, and learning into a single enterprise platform.
                 </p>
               </div>
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                <a href="/demo" className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 to-violet-500 px-8 py-3 text-sm font-semibold text-slate-950 shadow-glow transition hover:opacity-95">
-                  Get Free AI Demo
+                <a href="/demo" className="btn-primary">
+                  Book a strategy call
                 </a>
-                <a href="/services" className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-8 py-3 text-sm text-white transition hover:border-cyan-300 hover:text-cyan-100">
-                  Explore Solutions
+                <a href="/services" className="btn-secondary">
+                  Explore services
                 </a>
               </div>
               <div className="grid gap-4 sm:grid-cols-2 lg:max-w-xl">

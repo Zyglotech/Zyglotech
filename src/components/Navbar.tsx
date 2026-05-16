@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
@@ -18,11 +19,16 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/95 backdrop-blur-3xl shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <Link href="/" className="flex items-center gap-3 text-base font-semibold tracking-[0.01em] text-white">
-          <span className="inline-flex h-11 w-11 items-center justify-center rounded-3xl bg-gradient-to-br from-cyan-400/20 to-violet-500/15 text-cyan-300 ring-1 ring-cyan-300/20">Z</span>
-          <span className="text-white">Zyglo Tech</span>
+        <Link href="/" className="flex items-center gap-3 text-base font-semibold tracking-[0.02em] text-white">
+          <div className="relative h-12 w-12 overflow-hidden rounded-3xl bg-slate-900/90 ring-1 ring-cyan-300/20">
+            <Image src="/zyglo-logo.svg" alt="Zyglo logo" fill className="object-contain" />
+          </div>
+          <div>
+            <p className="text-sm font-semibold text-white">Zyglo Tech</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-slate-400">Tech Enterprise</p>
+          </div>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -34,8 +40,8 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <Link href="/demo" className="inline-flex items-center rounded-full bg-gradient-to-r from-cyan-400 to-violet-500 px-5 py-2 text-sm font-semibold text-slate-950 shadow-glow transition hover:opacity-90">
-            Book Free Demo
+          <Link href="/demo" className="inline-flex items-center rounded-full bg-gradient-to-r from-cyan-400 via-sky-400 to-violet-500 px-5 py-2 text-sm font-semibold text-slate-950 shadow-glow transition hover:opacity-95">
+            Book Strategy Call
           </Link>
         </div>
 
@@ -52,8 +58,8 @@ export function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <Link href="/demo" className="block rounded-3xl bg-gradient-to-r from-cyan-400 to-violet-500 px-4 py-3 text-sm font-semibold text-slate-950 text-center transition hover:opacity-95">
-              Book Free Demo
+            <Link href="/demo" className="block rounded-3xl bg-gradient-to-r from-cyan-400 via-sky-400 to-violet-500 px-4 py-3 text-sm font-semibold text-slate-950 text-center transition hover:opacity-95">
+              Book Strategy Call
             </Link>
           </div>
         </div>

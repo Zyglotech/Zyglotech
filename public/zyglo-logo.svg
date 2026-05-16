@@ -1,0 +1,12 @@
+<svg width="420" height="100" viewBox="0 0 420 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00C5F0" />
+      <stop offset="100%" stop-color="#7C3AED" />
+    </linearGradient>
+  </defs>
+  <rect x="12" y="22" width="32" height="56" rx="16" transform="rotate(20 12 22)" fill="url(#logoGradient)" />
+  <circle cx="30" cy="48" r="16" fill="#00C5F0" />
+  <text x="90" y="44" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="34" font-weight="700">ZYGLO</text>
+  <text x="90" y="70" fill="#A5B4FC" font-family="Inter, sans-serif" font-size="16" letter-spacing="0.18em">TECH ENTERPRISE</text>
+</svg>

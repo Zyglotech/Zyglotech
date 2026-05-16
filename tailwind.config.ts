@@ -9,29 +9,29 @@ const config: Config = {
       },
       colors: {
         zyglo: {
-          primary: '#00BFFF',
-          bright: '#38BDF8',
-          haze: '#67E8F9',
-          surface: '#0F172A',
-          deep: '#020617',
-          panel: '#111827',
-          accent: '#A855F7',
-          teal: '#22D3EE',
-          slate: '#94A3B8',
-          text: '#E2E8F0',
+          bg: '#04050c',
+          surface: '#121827',
+          panel: '#0f172a',
+          accent: '#7c3aed',
+          highlight: '#22d3ee',
+          blue: '#38bdf8',
+          slate: '#94a3b8',
+          text: '#f8fafc',
+          muted: '#cbd5e1',
         },
       },
       boxShadow: {
-        glow: '0 0 80px rgba(0, 191, 255, 0.18)',
+        glow: '0 0 90px rgba(56, 189, 248, 0.18)',
         panel: '0 30px 120px rgba(0, 0, 0, 0.35)',
+        soft: '0 24px 80px rgba(15, 23, 42, 0.55)',
       },
       backgroundImage: {
-        'cosmic-grid': 'radial-gradient(circle at 10% 10%, rgba(56,189,248,0.14), transparent 20%), radial-gradient(circle at 85% 15%, rgba(168,85,247,0.12), transparent 18%), linear-gradient(180deg, #020617 0%, #090d1a 100%)',
+        'cosmic-grid': 'radial-gradient(circle at 10% 10%, rgba(56,189,248,0.16), transparent 20%), radial-gradient(circle at 85% 15%, rgba(168,85,247,0.14), transparent 18%), linear-gradient(180deg, #04050c 0%, #090c15 100%)',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-12px)' },
+          '50%': { transform: 'translateY(-10px)' },
         },
         shimmer: {
           '0%': { backgroundPosition: '-200% 0' },
